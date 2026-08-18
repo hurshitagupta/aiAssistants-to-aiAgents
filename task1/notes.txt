@@ -1,0 +1,7 @@
+About AI Agents
+
+AI agents are software systems that perceive their environment, make decisions, and take actions to achieve specific goals. 
+They range from simple automation scripts to advanced autonomous assistants that learn from data and interact naturally with people. 
+Modern agents combine planning, learning, and natural language understanding to handle tasks, coordinate with other agents, and adapt to changing conditions.
+Responsible design and deployment require attention to safety, transparency, and ethical considerations so agents remain aligned with human values and expectations.
+
