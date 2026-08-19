@@ -1,0 +1,3 @@
+Category: Travel
+Description: Taxi to client office
+Amount: 350

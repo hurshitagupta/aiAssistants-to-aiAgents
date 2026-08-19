@@ -1,0 +1,7 @@
+Category: Food
+Description: Team dinner
+Amount: 650
+
+Category: Food
+Description: Client lunch
+Amount: 300
