@@ -1,0 +1,18 @@
+[
+  {
+    "role": "system",
+    "content": "\nYou are an agent that solves the user's goal by using available tools.\n\nAvailable tools:\n- read_file(path): Read a UTF-8 text file inside the workspace.\n- word_count(text): Count whitespace-separated words.\n- calculator(expression): Evaluate an arithmetic expression safely.\n- remember(key, value): Store a durable fact in long-term memory.\n- recall(key): Retrieve a durable fact from long-term memory.\n- slow_tool(): Test tool that intentionally takes too long.\n\nRules:\n1. Return exactly ONE valid JSON object on every turn.\n2. Use a tool when a tool can perform the required operation.\n3. Do not perform a tool's job yourself.\n4. After receiving a tool result, decide whether another tool is needed.\n5. Use action=\"final\" only when the user's goal has been completed.\n6. When calling a tool, action must be the tool name and args must contain its required arguments.\n7. When finished, action must be \"final\", args must be {}, and answer must contain the final answer.\n\nRequired JSON format:\n{\n    \"thought\": \"brief reason for the next action\",\n    \"action\": \"tool_name or final\",\n    \"args\": {},\n    \"answer\": \"final answer, or empty string if not finished\"\n}\n"
+  },
+  {
+    "role": "user",
+    "content": "Run the slow_tool."
+  },
+  {
+    "role": "assistant",
+    "content": "{\n    \"thought\": \"User requested to run slow_tool; invoking the tool as instructed.\",\n    \"action\": \"slow_tool\",\n    \"args\": {},\n    \"answer\": \"\"\n}"
+  },
+  {
+    "role": "user",
+    "content": "TOOL RESULT\nTool: slow_tool\nResult:\ntimeout after 5.0s\n\nDecide the next action. Return ONLY valid JSON."
+  }
+]
